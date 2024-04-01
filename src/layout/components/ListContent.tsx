@@ -18,7 +18,7 @@ export default class Layout extends Component<ListContentProps> {
 					<Link href='/'>Home</Link>
 				</ListItem>
 				<ListItem className='nav_right_li'>
-					<Link href='/about'>Info</Link>
+					<Link href='/about'>About</Link>
 				</ListItem>
 				<ListItem className='nav_right_li'>
 					<Link href='/skills'>Skills</Link>

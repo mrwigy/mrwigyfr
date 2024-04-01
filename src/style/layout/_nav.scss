@@ -1,5 +1,5 @@
 .nav {
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	flex-direction: row !important;
 	max-width: 2000px;
@@ -79,7 +79,7 @@
 				.MuiLink-root {
 					width: 100%;
 					text-align: center;
-					color: $grey;
+					color: $grey !important;
 				}
 
 				&:hover {
@@ -103,7 +103,7 @@
 			cursor: pointer;
 
 			@media (max-width: 1000px) {
-				display: block;
+				display: block !important;
 			}
 		}
 	}

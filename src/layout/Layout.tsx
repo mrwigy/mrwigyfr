@@ -1,22 +1,24 @@
 import { Component } from 'react';
 import { Link, Stack, Drawer } from '@mui/material';
 import { Outlet } from 'react-router-dom';
-
 import MenuIcon from '@mui/icons-material/Menu';
-
 import ListContent from './components/ListContent';
 
 type LayoutState = {
 	open: boolean;
 };
 
-export default class Layout extends Component {
-	state: LayoutState = {
-		open: false,
-	};
+export default class Layout extends Component<any, LayoutState> {
+	constructor(props: any) {
+		super(props);
+
+		this.state = {
+			open: false,
+		};
+	}
 
 	handleModal = () => {
-		this.setState({ open: !this.state.open });
+		this.setState((prevState) => ({ open: !prevState.open }));
 	};
 
 	render() {
