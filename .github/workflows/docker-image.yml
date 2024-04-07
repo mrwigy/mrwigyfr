@@ -22,5 +22,5 @@ jobs:
                       git pull
                       docker stop mrwigyfr || true && docker rm mrwigyfr || true
                       docker build -t mrwigyfr:latest .
-                      docker run -d --name mrwigyfr -p 81:80 --env-file /home/web/mrwigyfr/.env mrwigyfr:latest
+                      docker run -d --name mrwigyfr -p 81:80 mrwigyfr:latest
                       docker image prune -f
