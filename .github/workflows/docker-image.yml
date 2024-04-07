@@ -1,0 +1,26 @@
+name: CI/CD Pipeline
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build_and_push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Deploy to VPS
+              uses: appleboy/ssh-action@master
+              with:
+                  host: ${{ secrets.VPS_HOST }}
+                  username: ${{ secrets.VPS_USERNAME }}
+                  key: ${{ secrets.VPS_SSH_KEY }}
+                  script: |
+                      git pull
+                      docker stop mrwigyfr || true && docker rm mrwigyfr || true
+                      docker build -t mrwigyfr:latest .
+                      docker run -d --name mrwigyfr -p 81:80 --env-file /home/web/mrwigyfr/.env mrwigyfr:latest
+                      docker image prune -f
