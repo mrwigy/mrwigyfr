@@ -12,7 +12,7 @@ RUN npm run build
 
 FROM nginx:latest
 
-COPY --from=mrwigyfr /app/dist/ /usr/share/nginx/gtml/
+COPY --from=mrwigyfr /app/dist/ /usr/share/nginx/html/
 RUN ln -s /usr/share/nginx/html /usr/share/nginx/html/mrwigyfr
 
 RUN rm /etc/nginx/conf.d/default.conf
