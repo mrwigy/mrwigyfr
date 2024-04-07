@@ -10,9 +10,9 @@ export default class App extends Component {
 		return (
 			<>
 				<Nav />
-				{/* <Header /> */}
-				{/* <About /> */}
-				{/* <Skills /> */}
+				<Header />
+				<About />
+				<Skills />
 			</>
 		);
 	}
