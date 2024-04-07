@@ -35,7 +35,7 @@ export default class Header extends Component<any, HeaderState> {
 			<Stack className='header'>
 				<Stack className='header_left'>
 					<Typography variant='h1' className='header_left_h1'>
-						<Typewriter words={["Hi, I'm Wigy,"]} loop={1} />
+						<Typewriter words={["Hi, I'm Test,"]} loop={1} />
 					</Typography>
 					<Typography variant='h2' className='header_left_h2'>
 						<Typewriter words={['FullStack Developer']} loop={1} />

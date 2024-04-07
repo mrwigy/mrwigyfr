@@ -23,4 +23,3 @@ jobs:
                       docker stop mrwigyfr || true && docker rm mrwigyfr || true
                       docker build -t mrwigyfr:latest .
                       docker run -d --name mrwigyfr -p 81:80 mrwigyfr:latest
-                      docker image prune -f
