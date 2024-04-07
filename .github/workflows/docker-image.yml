@@ -12,6 +12,18 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v2
 
+            - name: Log in to GitHub Container Registry
+              uses: docker/login-action@v2
+              with:
+                  registry: ghcr.io
+                  username: ${{ github.repository_owner }}
+                  password: ${{ secrets.CR_PAT }}
+
+            - name: Build and push Docker image
+              run: |
+                  docker build -t ghcr.io/${{ github.repository_owner }}/mrwigyfr:latest .
+                  docker push ghcr.io/${{ github.repository_owner }}/mrwigyfr:latest
+
             - name: Deploy to VPS
               uses: appleboy/ssh-action@master
               with:
@@ -19,8 +31,8 @@ jobs:
                   username: ${{ secrets.VPS_USERNAME }}
                   key: ${{ secrets.VPS_SSH_KEY }}
                   script: |
-                      pwd
-                  #   git pull
-                  #   docker stop mrwigyfr || true && docker rm mrwigyfr || true
-                  #   docker build -t mrwigyfr:latest .
-                  #   docker run -d --name mrwigyfr -p 81:80 mrwigyfr:latest
+                      docker login ghcr.io -u ${{ github.repository_owner }} -p ${{ secrets.CR_PAT }}
+                      docker pull ghcr.io/${{ github.repository_owner }}/mrwigyfr:latest
+                      docker stop mrwigyfr || true && docker rm mrwigyfr || true
+                      docker run -d --name mrwigyfr -p 81:80 ghcr.io/${{ github.repository_owner }}/mrwigyfr:latest
+                      docker image prune -f
