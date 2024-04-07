@@ -1,57 +1,26 @@
 import { Component } from 'react';
-import { Typewriter } from 'react-simple-typewriter';
-import { Stack, Link, Typography, CardMedia } from '@mui/material';
+import { Stack, Typography, CardMedia } from '@mui/material';
 
-import { SkillType } from '../vite-env';
-
-type HeaderState = {
-	tech: string[];
-};
-
-export default class Header extends Component<any, HeaderState> {
-	constructor(props: any) {
-		super(props);
-
-		this.state = {
-			tech: [],
-		};
-	}
-
-	componentDidMount(): void {
-		fetch('/data/skills.json')
-			.then((res) => res.json())
-			.then((data) => {
-				const tech = data.map((skill: SkillType) => skill.name);
-				this.setState({
-					tech,
-				});
-			});
-	}
-
+export default class Header extends Component {
 	render() {
-		const { tech } = this.state;
-
 		return (
 			<Stack className='header'>
-				<Stack className='header_left'>
-					<Typography variant='h1' className='header_left_h1'>
-						<Typewriter words={["Hi, I'm Wigy"]} loop={1} />
-					</Typography>
-					<Typography variant='h2' className='header_left_h2'>
-						<Typewriter words={['FullStack Developer']} loop={1} />
-					</Typography>
-					<Typography className='header_left_typo'>
-						I work with{' '}
-						<span>
-							<Typewriter words={tech} loop cursor />
-						</span>
-					</Typography>
-					<Link href='/contact' className='header_left_link'>
-						Contact me
-					</Link>
-				</Stack>
-				<Stack className='header_right'>
-					<CardMedia className='header_right_img' component='img' image='/img/1656940565.gif' alt='Developer GIF' />
+				<Stack className='header_container'>
+					<Stack className='header_container_logo'>
+						<CardMedia className='header_container_logo_img' component='img' image='/img/logo.png' alt='logo' />
+						<Stack className='header_container_logo_shape'></Stack>
+					</Stack>
+					<Stack className='header_container_text'>
+						<Typography variant='h1' className='header_container_text_h1'>
+							Hi, I'm Wigy
+						</Typography>
+						<Typography variant='h2' className='header_container_text_h2'>
+							FullStack Developer
+						</Typography>
+						<Typography className='header_container_text_p'>
+							I'm a full-stack developer focused on creating exceptional digital experiences that are fast, accessible, visually appealing and responsive. If you'd like to get started on a web project, contact me
+						</Typography>
+					</Stack>
 				</Stack>
 			</Stack>
 		);

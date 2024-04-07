@@ -2,6 +2,10 @@
 	width: 100%;
 	align-items: center;
 	position: fixed !important;
+	z-index: 1;
+	background: $richBlack;
+	opacity: 0.95;
+	border-bottom: 1px solid $gunmetal;
 
 	&_container {
 		flex-direction: row !important;
@@ -9,7 +13,11 @@
 		align-items: center;
 		width: 100%;
 		max-width: 80rem;
-		padding: 16px 32px !important;
+		padding: 16px 0 !important;
+
+		@media (max-width: 1300px) {
+			padding: 16px 36px !important;
+		}
 
 		&_link {
 			font-weight: 700 !important;
@@ -24,7 +32,7 @@
 			align-items: center;
 			gap: 1.5rem;
 
-			@media (max-width: 768px) {
+			@media (max-width: 810px) {
 				display: none !important;
 			}
 
@@ -33,7 +41,7 @@
 				flex-direction: row !important;
 				gap: 1.5rem;
 
-				@media (max-width: 768px) {
+				@media (max-width: 810px) {
 					flex-direction: column !important;
 					padding: 1rem !important;
 					border-bottom: 1px solid $gunmetal;
@@ -59,7 +67,7 @@
 				width: 0.125rem;
 				height: 1.5rem;
 
-				@media (max-width: 768px) {
+				@media (max-width: 810px) {
 					display: none !important;
 				}
 			}
@@ -82,7 +90,7 @@
 		&_burger {
 			display: none !important;
 
-			@media (max-width: 768px) {
+			@media (max-width: 810px) {
 				display: flex !important;
 			}
 
