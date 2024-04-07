@@ -1,8 +1,9 @@
 import { Component } from 'react';
 import { CardMedia, Stack, Typography } from '@mui/material';
+import { SkillType } from '../vite-env';
 
 type SkillsState = {
-	skills: [];
+	skills: SkillType[];
 };
 
 export default class Skills extends Component<any, SkillsState> {
@@ -15,33 +16,35 @@ export default class Skills extends Component<any, SkillsState> {
 	}
 
 	componentDidMount(): void {
-		fetch('./data/skills.json')
+		fetch('/data/skills.json')
 			.then((res) => res.json())
-			.then((data) => {
-				this.setState({
-					skills: data,
-				});
+			.then((data: SkillType[]) => {
+				this.setState({ skills: data });
 			});
 	}
 
 	render() {
 		const { skills } = this.state;
-		console.log(skills);
 
 		return (
 			<Stack className='skills'>
-				<Typography variant='h3' className='skills_title'>
-					Technical skills
-				</Typography>
-				<Stack className='skills_grid'>
-					{skills.map((skill: any) => {
-						return (
-							<Stack className='skills_grid_card' id='item1'>
-								<CardMedia className='skills_grid_card_img' component='img' image={`/img/${skill.icon}`} />
-								<Typography className='skills_grid_card_typo'>{skill.name}</Typography>
-							</Stack>
-						);
-					})}
+				<Stack className='skills_container'>
+					<Stack className='skills_container_text'>
+						<Typography className='skills_container_text_chip'>Skills</Typography>
+						<Typography className='skills_container_text_title'>The skills, tools and technologies I am really good at:</Typography>
+					</Stack>
+					<Stack className='skills_container_cards'>
+						{skills.map((skill: SkillType) => {
+							return (
+								<Stack className='skills_container_cards_item'>
+									<a href={skill.link} target='_blank' rel='noreferrer' className='skills_container_cards_item_link'>
+										<CardMedia src={`img/${skill.icon}`} alt={skill.name} component='img' className='skills_container_cards_item_link_img' />
+									</a>
+									<Typography className='skills_container_cards_item_title'>{skill.name}</Typography>
+								</Stack>
+							);
+						})}
+					</Stack>
 				</Stack>
 			</Stack>
 		);

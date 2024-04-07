@@ -7,4 +7,5 @@ export type HardSkillsType = {
 export type SkillType = {
 	name: string;
 	icon: string;
+	link: string;
 };

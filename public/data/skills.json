@@ -1,42 +1,82 @@
 [
 	{
 		"name": "JavaScript",
-		"icon": "js.png"
-	},
-	{
-		"name": "ReactJS",
-		"icon": "react.png"
-	},
-	{
-		"name": "TypeScript",
-		"icon": "ts.png"
-	},
-	{
-		"name": "NodeJS",
-		"icon": "node.png"
-	},
-	{
-		"name": "ExpressJS",
-		"icon": "express.png"
-	},
-	{
-		"name": "MongoDB",
-		"icon": "mongodb.png"
+		"icon": "js.png",
+		"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
 	},
 	{
 		"name": "Python",
-		"icon": "python.png"
+		"icon": "python.png",
+		"link": "https://www.python.org/"
 	},
 	{
 		"name": "Lua",
-		"icon": "lua.png"
+		"icon": "lua.png",
+		"link": "https://www.lua.org/"
+	},
+	{
+		"name": "TypeScript",
+		"icon": "ts.png",
+		"link": "https://www.typescriptlang.org/"
+	},
+	{
+		"name": "ReactJS",
+		"icon": "react.png",
+		"link": "https://react.dev"
 	},
 	{
 		"name": "CypressJS",
-		"icon": "cypress.png"
+		"icon": "cypress.png",
+		"link": "https://www.cypress.io"
 	},
 	{
 		"name": "M-UI",
-		"icon": "mui.png"
+		"icon": "mui.png",
+		"link": "https://mui.com"
+	},
+	{
+		"name": "Redux",
+		"icon": "redux.png",
+		"link": "https://redux.js.org"
+	},
+	{
+		"name": "NodeJS",
+		"icon": "node.png",
+		"link": "https://nodejs.org"
+	},
+	{
+		"name": "ExpressJS",
+		"icon": "express.png",
+		"link": "https://expressjs.com"
+	},
+	{
+		"name": "MongoDB",
+		"icon": "mongodb.png",
+		"link": "https://www.mongodb.com"
+	},
+	{
+		"name": "SocketIO",
+		"icon": "socketio.png",
+		"link": "https://socket.io"
+	},
+	{
+		"name": "VsCode",
+		"icon": "vsc.png",
+		"link": "https://code.visualstudio.com"
+	},
+	{
+		"name": "Windows",
+		"icon": "windows.png",
+		"link": "https://www.microsoft.com/en-us/windows"
+	},
+	{
+		"name": "Linux",
+		"icon": "linux.png",
+		"link": "https://www.linux.org"
+	},
+	{
+		"name": "MacOs",
+		"icon": "macos.png",
+		"link": "https://www.apple.com/macos"
 	}
 ]

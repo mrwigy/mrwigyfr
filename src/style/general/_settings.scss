@@ -43,6 +43,6 @@ body {
 /* Set default font family */
 body {
 	background: $richBlack;
-	color: $lavender;
+	color: $lavender !important;
 	font-family: 'Roboto', sans-serif;
 }
