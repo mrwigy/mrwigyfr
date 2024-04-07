@@ -1,0 +1,104 @@
+.about {
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+	flex-direction: row !important;
+	background: $glaucous;
+
+	@media (max-width: 1200px) {
+		flex-direction: column !important;
+	}
+
+	&_left {
+		width: 40%;
+
+		@media (max-width: 1200px) {
+			width: 50%;
+		}
+		@media (max-width: 1000px) {
+			width: 70%;
+		}
+		@media (max-width: 400px) {
+			width: 90%;
+		}
+
+		&_img {
+			width: 80% !important;
+			height: auto !important;
+			border-radius: 10px;
+
+			@media (max-width: 1200px) {
+				width: 100%;
+			}
+		}
+	}
+	&_right {
+		width: 50%;
+		color: $lavender;
+
+		@media (max-width: 1200px) {
+			width: 90%;
+			margin-top: 100px;
+			text-align: center;
+		}
+
+		&_top {
+			&_typo {
+				font-size: 2em !important;
+				width: 75%;
+				font-family: 'Rubik', sans-serif !important;
+
+				@media (max-width: 1200px) {
+					margin: auto;
+				}
+				@media (max-width: 1000px) {
+					width: 100%;
+				}
+				@media (max-width: 600px) {
+					font-size: 1.5em !important;
+				}
+			}
+		}
+		&_center {
+			max-width: 2000px;
+			flex-direction: row !important;
+
+			@media (max-width: 1200px) {
+				justify-content: center;
+			}
+
+			&_card {
+				margin: 50px 100px 50px 0;
+				text-align: center;
+				// width: 30%;
+
+				@media (max-width: 800px) {
+					width: 50%;
+				}
+
+				&_top {
+					&_typo {
+						font-size: 2em !important;
+						font-family: 'Rubik', sans-serif !important;
+
+						@media (max-width: 600px) {
+							font-size: 1.5em !important;
+						}
+					}
+				}
+				&_body {
+					margin-top: 10px;
+
+					&_typo {
+						font-size: 1.5em !important;
+						font-family: 'Rubik', sans-serif !important;
+
+						@media (max-width: 600px) {
+							font-size: 1em !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

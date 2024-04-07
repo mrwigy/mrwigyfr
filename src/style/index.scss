@@ -2,9 +2,10 @@
 @import './general/var';
 @import './general/settings';
 
-// Layout
-@import './layout/nav';
+// Components
+@import './components/nav';
+@import './components/header';
+@import './components/about';
+@import './components/skills';
 
-// Pages
-@import './pages/home';
-@import './pages/about';
+@import './components/contact';

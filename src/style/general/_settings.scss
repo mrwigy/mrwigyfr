@@ -1,13 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-* {
-	margin: 0;
-	padding: 0;
+/* Reset CSS */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
-	outline: none;
-	resize: none;
 }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+	list-style: none;
+}
+
+/* Remove default padding */
 html,
 body {
-	background: $grey;
+	padding: 0;
+}
+
+/* Remove border */
+body {
+	border: 0;
+}
+
+/* Set default font family */
+body {
+	background: $richBlack;
+	color: $lavender;
+	font-family: 'Roboto', sans-serif;
 }

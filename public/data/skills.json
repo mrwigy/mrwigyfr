@@ -1,4 +1,42 @@
-{
-	"hardSkills": ["JavaScript", "React", "Redux", "Node.js", "Express", "MongoDB", "HTML", "CSS", "SASS", "Bootstrap", "Material-UI"],
-	"softSkills": ["Teamwork", "Problem Solving", "Communication", "Time Management", "Adaptability", "Creativity"]
-}
+[
+	{
+		"name": "JavaScript",
+		"icon": "js.png"
+	},
+	{
+		"name": "ReactJS",
+		"icon": "react.png"
+	},
+	{
+		"name": "TypeScript",
+		"icon": "ts.png"
+	},
+	{
+		"name": "NodeJS",
+		"icon": "node.png"
+	},
+	{
+		"name": "ExpressJS",
+		"icon": "express.png"
+	},
+	{
+		"name": "MongoDB",
+		"icon": "mongodb.png"
+	},
+	{
+		"name": "Python",
+		"icon": "python.png"
+	},
+	{
+		"name": "Lua",
+		"icon": "lua.png"
+	},
+	{
+		"name": "CypressJS",
+		"icon": "cypress.png"
+	},
+	{
+		"name": "M-UI",
+		"icon": "mui.png"
+	}
+]

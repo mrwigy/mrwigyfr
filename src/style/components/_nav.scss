@@ -1,0 +1,149 @@
+.nav {
+	width: 100%;
+	align-items: center;
+	position: fixed !important;
+
+	&_container {
+		flex-direction: row !important;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 80rem;
+		padding: 16px 32px !important;
+
+		&_link {
+			font-weight: 700 !important;
+			letter-spacing: -0.02em;
+			font-size: 30px !important;
+			color: $lavender !important;
+			text-decoration: none !important;
+		}
+
+		&_navigation {
+			flex-direction: row !important;
+			align-items: center;
+			gap: 1.5rem;
+
+			@media (max-width: 768px) {
+				display: none !important;
+			}
+
+			&_list {
+				display: flex;
+				flex-direction: row !important;
+				gap: 1.5rem;
+
+				@media (max-width: 768px) {
+					flex-direction: column !important;
+					padding: 1rem !important;
+					border-bottom: 1px solid $gunmetal;
+				}
+
+				&_item {
+					&_link {
+						color: $lavender !important;
+						text-decoration: none !important;
+						font-weight: 500 !important;
+						transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+						font-size: 1rem !important;
+						line-height: 1.5rem !important;
+
+						&:hover {
+							transform: scale(1.25);
+						}
+					}
+				}
+			}
+			&_divider {
+				background: $gunmetal;
+				width: 0.125rem;
+				height: 1.5rem;
+
+				@media (max-width: 768px) {
+					display: none !important;
+				}
+			}
+			&_action {
+				&_button {
+					transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+					padding: 0.375rem;
+					border-radius: 0.5rem;
+
+					&_icon {
+						color: $lavender;
+					}
+
+					&:hover {
+						background: $gunmetal !important;
+					}
+				}
+			}
+		}
+		&_burger {
+			display: none !important;
+
+			@media (max-width: 768px) {
+				display: flex !important;
+			}
+
+			&_button {
+				transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+				padding: 0.375rem;
+				border-radius: 0.5rem;
+
+				&_icon {
+					color: $lavender;
+				}
+
+				&:hover {
+					background: $gunmetal !important;
+				}
+			}
+		}
+		&_drawer {
+			&_top {
+				flex-direction: row !important;
+				justify-content: space-between;
+				align-items: center;
+				padding: 16px 32px;
+				border-bottom: 1px solid $gunmetal;
+
+				&_typo {
+					font-weight: 700 !important;
+					letter-spacing: -0.02em;
+					font-size: 25px !important;
+					color: $lavender !important;
+					text-decoration: none !important;
+				}
+				&_button {
+					transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+					padding: 0.375rem;
+					border-radius: 0.5rem;
+
+					&_icon {
+						color: $lavender;
+					}
+
+					&:hover {
+						background: $gunmetal !important;
+					}
+				}
+			}
+			&_bottom {
+				flex-direction: row !important;
+				justify-content: space-between;
+				align-items: center;
+				padding: 16px 32px;
+
+				&_typo {
+					color: $lavender !important;
+				}
+			}
+
+			.MuiDrawer-paper {
+				background: $richBlack;
+				min-width: 50vw;
+			}
+		}
+	}
+}

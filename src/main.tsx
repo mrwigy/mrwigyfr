@@ -1,12 +1,9 @@
 import ReactDOM from 'react-dom/client';
-// import { Provider } from 'react-redux';
-// import { store } from './redux/store';
-
 import App from './App.tsx';
+
+import 'primereact/resources/themes/lara-light-cyan/theme.css';
+import 'primeicons/primeicons.css';
+
 import './style/index.scss';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-	// <Provider store={store}>
-	<App />
-	// </Provider>
-);
+ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
