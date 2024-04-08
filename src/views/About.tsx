@@ -1,69 +1,38 @@
 import { Component } from 'react';
-import { Stack, Typography, CardMedia } from '@mui/material';
+import { Stack, Typography, Tooltip } from '@mui/material';
 
-type AboutState = {
-	numProjects: number;
-	numTechnologies: number;
-};
-
-export default class About extends Component<any, AboutState> {
-	constructor(props: any) {
-		super(props);
-
-		this.state = {
-			numProjects: 0,
-			numTechnologies: 0,
-		};
-	}
-
-	currentYear: number = new Date().getFullYear() - 2021;
-	componentDidMount(): void {
-		fetch('./data/projects.json')
-			.then((res) => res.json())
-			.then((data) => this.setState({ numProjects: data.length }));
-
-		fetch('./data/skills.json')
-			.then((res) => res.json())
-			.then((data) => this.setState({ numTechnologies: data.length }));
-	}
-
+export default class About extends Component {
 	render() {
-		const { numProjects, numTechnologies } = this.state;
-
 		return (
 			<Stack className='about'>
-				<Stack className='about_left'>
-					<CardMedia className='about_left_img' component='img' image='/img/1656940853.gif' />
-				</Stack>
-				<Stack className='about_right'>
-					<Stack>
-						<Typography className='about_right_top_typo'>Hello, I'm Wigy, developer and video game enthusiast. If you'd like to entrust me with the development of your project, don't hesitate to contact me :)</Typography>
+				<Stack className='about_container'>
+					<Stack className='about_container_chip'>
+						<Typography className='about_container_chip_text'>About me</Typography>
 					</Stack>
-					<Stack className='about_right_center'>
-						<Stack className='about_right_center_card'>
-							<Stack className='about_right_center_card_top'>
-								<Typography className='about_right_center_card_top_typo'>{numProjects}</Typography>
-							</Stack>
-							<Stack className='about_right_center_card_body'>
-								<Typography className='about_right_center_card_body_typo'>Completed projects</Typography>
-							</Stack>
-						</Stack>
-						<Stack className='about_right_center_card'>
-							<Stack className='about_right_center_card_top'>
-								<Typography className='about_right_center_card_top_typo'>{numTechnologies}</Typography>
-							</Stack>
-							<Stack className='about_right_center_card_body'>
-								<Typography className='about_right_center_card_body_typo'>Technologies used</Typography>
-							</Stack>
-						</Stack>
-						<Stack className='about_right_center_card'>
-							<Stack className='about_right_center_card_top'>
-								<Typography className='about_right_center_card_top_typo'>{this.currentYear}</Typography>
-							</Stack>
-							<Stack className='about_right_center_card_body'>
-								<Typography className='about_right_center_card_body_typo'>Years of experience</Typography>
-							</Stack>
-						</Stack>
+					<Stack className='about_container_text'>
+						<Typography variant='h3' className='about_container_text_h3'>
+							Curious about me? Here you have it:
+						</Typography>
+						<Typography className='about_container_text_typo'>
+							I'm a passionate fullstack developer, specializing in javascript development (ReactJS & NodeJS). I'm enthusiastic about bringing the technical and visual aspects of digital products to life. I'm all about user
+							experience, design and writing clear, readable, high-performance code.
+						</Typography>
+						<Typography className='about_container_text_typo'>
+							I began my journey as a professional web developer in 2021, and since then I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Today, 3
+							years after starting my journey as a web developer, I'm building cutting-edge web applications using technologies such as ReactJs, TypeScript, NodeJS, MUI and more.
+						</Typography>
+						<Typography className='about_container_text_typo'>I'm a progressive thinker and enjoy working on products from start to finish, from ideation to development.</Typography>
+						<Typography className='about_container_text_typo'>
+							When I'm not in developer mode, you can find me on or Steam, playing great games with close friends or enjoying my free time. You can join me on{' '}
+							<Tooltip title='mr__wigy' placement='bottom' className='about_container_text_typo_a'>
+								<span>Discord</span>
+							</Tooltip>{' '}
+							to talk about your projects, or follow me on{' '}
+							<a className='about_container_text_typo_a' href='https://github.com/mrwigy' target='_blank'>
+								GitHub.
+							</a>
+						</Typography>
+						<Typography className='about_container_text_typo'>Finally, some quick bits about me.</Typography>
 					</Stack>
 				</Stack>
 			</Stack>
