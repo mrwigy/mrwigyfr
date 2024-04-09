@@ -11,6 +11,7 @@ type WorkState = {
 		technologies: Array<string>;
 		image: string;
 		link: string;
+		source: string;
 	}>;
 	load: number;
 };
@@ -61,7 +62,7 @@ export default class Work extends Component<any, WorkState> {
 											})}
 										</Stack>
 										<Stack className='work_container_cards_item_link'>
-											<IconButton className='work_container_cards_item_link_button' href={project.link} target='_blank' rel='noopener noreferrer'>
+											<IconButton className='work_container_cards_item_link_button' href={project.source ? project.source : project.link} target='_blank'>
 												<LaunchIcon className='work_container_cards_item_link_button_icon' />
 											</IconButton>
 										</Stack>

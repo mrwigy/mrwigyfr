@@ -16,4 +16,5 @@ export type ProjectType = {
 	technologies: string[];
 	image: string;
 	link: string;
+	source: string;
 };
