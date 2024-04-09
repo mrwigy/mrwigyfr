@@ -13,6 +13,9 @@
 		@media (max-width: 1300px) {
 			padding: 96px 36px !important;
 		}
+		@media (max-width: 600px) {
+			padding: 96px 16px !important;
+		}
 
 		&_text {
 			justify-content: center;

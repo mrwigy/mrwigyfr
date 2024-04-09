@@ -23,22 +23,22 @@ export default class NavContent extends Component<any, NavContentState> {
 			<>
 				<List className='nav_container_navigation_list'>
 					<ListItem className='nav_container_navigation_list_item'>
-						<Link className='nav_container_navigation_list_item_link' href='/'>
+						<Link className='nav_container_navigation_list_item_link' href='#about'>
 							About
 						</Link>
 					</ListItem>
 					<ListItem className='nav_container_navigation_list_item'>
-						<Link className='nav_container_navigation_list_item_link' href='/'>
+						<Link className='nav_container_navigation_list_item_link' href='#work'>
 							Work
 						</Link>
 					</ListItem>
 					<ListItem className='nav_container_navigation_list_item'>
-						<Link className='nav_container_navigation_list_item_link' href='/'>
+						<Link className='nav_container_navigation_list_item_link' href='#testimonials'>
 							Testimonials
 						</Link>
 					</ListItem>
 					<ListItem className='nav_container_navigation_list_item'>
-						<Link className='nav_container_navigation_list_item_link' href='/'>
+						<Link className='nav_container_navigation_list_item_link' href='#contact'>
 							Contact
 						</Link>
 					</ListItem>

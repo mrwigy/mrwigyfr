@@ -1,10 +1,10 @@
 import { Component } from 'react';
-import { Stack, Typography, Tooltip } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 
 export default class About extends Component {
 	render() {
 		return (
-			<Stack className='about'>
+			<Stack className='about' id='about'>
 				<Stack className='about_container'>
 					<Stack className='about_container_chip'>
 						<Typography className='about_container_chip_text'>About me</Typography>
@@ -24,9 +24,9 @@ export default class About extends Component {
 						<Typography className='about_container_text_typo'>I'm a progressive thinker and enjoy working on products from start to finish, from ideation to development.</Typography>
 						<Typography className='about_container_text_typo'>
 							When I'm not in developer mode, you can find me on or Steam, playing great games with close friends or enjoying my free time. You can join me on{' '}
-							<Tooltip title='mr__wigy' placement='bottom' className='about_container_text_typo_a'>
-								<span>Discord</span>
-							</Tooltip>{' '}
+							<a className='about_container_text_typo_a' href='https://discord.com/users/301505068962807808' target='_blank'>
+								Discord
+							</a>{' '}
 							to talk about your projects, or follow me on{' '}
 							<a className='about_container_text_typo_a' href='https://github.com/mrwigy' target='_blank'>
 								GitHub.

@@ -9,3 +9,11 @@ export type SkillType = {
 	icon: string;
 	link: string;
 };
+
+export type ProjectType = {
+	name: string;
+	description: string;
+	technologies: string[];
+	image: string;
+	link: string;
+};

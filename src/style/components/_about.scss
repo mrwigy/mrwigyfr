@@ -14,6 +14,9 @@
 		@media (max-width: 1300px) {
 			padding: 96px 36px !important;
 		}
+		@media (max-width: 600px) {
+			padding: 96px 16px !important;
+		}
 
 		&_chip {
 			&_text {
@@ -30,17 +33,39 @@
 		&_text {
 			text-align: center;
 
+			@media (max-width: 850px) {
+				text-align: justify !important;
+			}
+
 			&_h3 {
 				font-size: 3rem !important;
 				line-height: 2.5rem !important;
 				font-weight: 700 !important;
 				margin-bottom: 50px !important;
+
+				@media (max-width: 1021px) {
+					font-size: 2.5rem !important;
+					line-height: 2.25rem !important;
+				}
+				@media (max-width: 500px) {
+					font-size: 2rem !important;
+					line-height: 2rem !important;
+				}
 			}
 			&_typo {
 				font-size: 1.375rem !important;
 				line-height: 2rem !important;
 				font-weight: 400 !important;
 				margin-bottom: 20px !important;
+
+				@media (max-width: 1021px) {
+					font-size: 1.25rem !important;
+					line-height: 1.75rem !important;
+				}
+				@media (max-width: 500px) {
+					font-size: 1.125rem !important;
+					line-height: 1.5rem !important;
+				}
 
 				&_a {
 					text-decoration: underline;

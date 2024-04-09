@@ -14,6 +14,9 @@
 		@media (max-width: 1300px) {
 			padding: 96px 36px !important;
 		}
+		@media (max-width: 600px) {
+			padding: 96px 16px !important;
+		}
 
 		@media (max-width: 810px) {
 			flex-direction: column !important;
