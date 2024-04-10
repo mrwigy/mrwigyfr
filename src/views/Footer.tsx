@@ -6,7 +6,7 @@ export default class Footer extends Component {
 		return (
 			<Stack className='footer'>
 				<Stack className='footer_container'>
-					<Typography className='footer_container_text'>2023 | Coded with ❤️️ by Mr__Wigy</Typography>
+					<Typography className='footer_container_text'>{new Date().getFullYear()} | Coded with ❤️️ by Mr__Wigy</Typography>
 				</Stack>
 			</Stack>
 		);
