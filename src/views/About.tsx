@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Stack, Typography } from '@mui/material';
+import { Link, Stack, Typography } from '@mui/material';
 
 export default class About extends Component {
 	render() {
@@ -24,13 +24,13 @@ export default class About extends Component {
 						<Typography className='about_container_text_typo'>I'm a progressive thinker and enjoy working on products from start to finish, from ideation to development.</Typography>
 						<Typography className='about_container_text_typo'>
 							When I'm not in developer mode, you can find me on or Steam, playing great games with close friends or enjoying my free time. You can join me on{' '}
-							<a className='about_container_text_typo_a' href='https://discord.com/users/301505068962807808' target='_blank'>
+							<Link className='about_container_text_typo_a' href='https://discord.com/users/301505068962807808' target='_blank' aria-label='Discord'>
 								Discord
-							</a>{' '}
+							</Link>{' '}
 							to talk about your projects, or follow me on{' '}
-							<a className='about_container_text_typo_a' href='https://github.com/mrwigy' target='_blank'>
+							<Link className='about_container_text_typo_a' href='https://github.com/mrwigy' target='_blank' aria-label='GitHub'>
 								GitHub.
-							</a>
+							</Link>
 						</Typography>
 						<Typography className='about_container_text_typo'>Finally, some quick bits about me.</Typography>
 					</Stack>

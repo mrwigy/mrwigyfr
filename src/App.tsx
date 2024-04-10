@@ -5,6 +5,8 @@ import Header from './views/Header';
 import About from './views/About';
 import Skills from './views/Skills';
 import Work from './views/Work';
+import Contact from './views/Contact';
+import Footer from './views/Footer';
 
 export default class App extends Component {
 	render() {
@@ -15,6 +17,8 @@ export default class App extends Component {
 				<About />
 				<Skills />
 				<Work />
+				<Contact />
+				<Footer />
 			</>
 		);
 	}

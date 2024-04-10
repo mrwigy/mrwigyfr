@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Button, CardMedia, IconButton, Stack, Typography } from '@mui/material';
+import { Button, CardMedia, IconButton, Link, Stack, Typography } from '@mui/material';
 
 import LaunchIcon from '@mui/icons-material/Launch';
 import { ProjectType } from '../vite-env';
@@ -49,20 +49,24 @@ export default class Work extends Component<any, WorkState> {
 							return (
 								<Stack className={`work_container_cards_item ${index % 2 !== 0 && 'reverse'}`} key={index}>
 									<Stack className='work_container_cards_item_media'>
-										<a href={project.link} target='_blank'>
+										<Link href={project.link} target='_blank' aria-label={project.name}>
 											<CardMedia src={`projectImg/${project.image}`} alt={project.description} component='img' className='work_container_cards_item_media_img' />
-										</a>
+										</Link>
 									</Stack>
 									<Stack className='work_container_cards_item_text'>
 										<Typography className='work_container_cards_item_text_h1'>{project.name}</Typography>
 										<Typography className='work_container_cards_item_text_desc'>{project.description.length > 200 ? project.description.slice(0, 200) + '...' : project.description}</Typography>
 										<Stack className='work_container_cards_item_text_tech'>
 											{project.technologies.map((tech: string) => {
-												return <Typography className='work_container_cards_item_text_tech_typo'>{tech}</Typography>;
+												return (
+													<Typography key={tech} className='work_container_cards_item_text_tech_typo'>
+														{tech}
+													</Typography>
+												);
 											})}
 										</Stack>
 										<Stack className='work_container_cards_item_link'>
-											<IconButton className='work_container_cards_item_link_button' href={project.source ? project.source : project.link} target='_blank'>
+											<IconButton className='work_container_cards_item_link_button' href={project.source ? project.source : project.link} target='_blank' aria-label='source code'>
 												<LaunchIcon className='work_container_cards_item_link_button_icon' />
 											</IconButton>
 										</Stack>
@@ -75,6 +79,7 @@ export default class Work extends Component<any, WorkState> {
 						<Stack className='work_container_load'>
 							<Button
 								className='work_container_load_button'
+								aria-label='Load More'
 								onClick={() => {
 									this.setState({ load: load + 3 });
 								}}

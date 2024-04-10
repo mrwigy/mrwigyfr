@@ -69,7 +69,8 @@
 
 				&_a {
 					text-decoration: underline;
-					color: $lavender;
+					text-decoration-color: $lavender !important;
+					color: $lavender !important;
 					font-weight: 700 !important;
 				}
 			}
