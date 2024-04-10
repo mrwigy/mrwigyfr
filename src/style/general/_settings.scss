@@ -47,3 +47,14 @@ body {
 	color: $lavender !important;
 	font-family: 'Roboto', sans-serif;
 }
+
+// change scrollbar color
+::-webkit-scrollbar {
+	width: 10px;
+	background: $gunmetal;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $charcoal;
+	border-radius: 10px;
+}
