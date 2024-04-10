@@ -37,7 +37,7 @@
 				height: 300px;
 				max-width: 300px;
 				height: 300px;
-				border: 8px solid $richBlack;
+				border: 8px solid var(--rich-black);
 
 				@media (max-width: 810px) {
 					top: 10px;
@@ -48,7 +48,7 @@
 			}
 
 			&_shape {
-				background: $charcoal;
+				background: var(--charcoal);
 				width: 300px;
 				height: 300px;
 			}

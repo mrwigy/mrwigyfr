@@ -2,7 +2,7 @@
 	width: 100%;
 	align-items: center;
 	padding-top: 100px;
-	background: $lightRichBlack;
+	background: var(--light-rich-black);
 
 	&_container {
 		justify-content: center;
@@ -26,7 +26,7 @@
 				font-weight: 500 !important;
 				font-size: 0.875rem;
 				line-height: 1.25rem;
-				background: $charcoal;
+				background: var(--charcoal);
 				text-align: center;
 				padding: 4px 20px;
 				border-radius: 0.75rem;
@@ -55,7 +55,7 @@
 
 				&_media {
 					width: 50%;
-					background: $charcoal;
+					background: var(--charcoal);
 					padding: 48px;
 					justify-content: center;
 					align-items: center;
@@ -81,7 +81,7 @@
 				}
 				&_text {
 					width: 50%;
-					background: $gunmetal;
+					background: var(--gunmetal);
 					padding: 48px;
 
 					@media (max-width: 1020px) {
@@ -111,7 +111,7 @@
 							font-size: 0.875rem !important;
 							line-height: 1.25rem !important;
 							font-weight: 500 !important;
-							background: $charcoal;
+							background: var(--charcoal);
 							text-align: center;
 							padding: 4px 20px;
 							border-radius: 0.75rem;
@@ -130,11 +130,11 @@
 						border-radius: 0.5rem;
 
 						&_icon {
-							color: $lavender;
+							color: var(--lavender);
 						}
 
 						&:hover {
-							background: $lightRichBlack !important;
+							background: var(--light-rich-black) !important;
 						}
 					}
 				}
@@ -146,7 +146,7 @@
 			margin-bottom: 50px;
 
 			&_button {
-				background: $charcoal !important;
+				background: var(--charcoal) !important;
 				width: 100%;
 				padding: 20px 40px !important;
 				border-radius: 0.75rem;
@@ -154,10 +154,10 @@
 				line-height: 1.75rem !important;
 				font-weight: 600 !important;
 				transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-				color: $lavender !important;
+				color: var(--lavender) !important;
 
 				&:hover {
-					background: $gunmetal !important;
+					background: var(--gunmetal) !important;
 				}
 			}
 		}

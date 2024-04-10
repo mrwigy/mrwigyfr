@@ -3,9 +3,9 @@
 	align-items: center;
 	position: fixed !important;
 	z-index: 1;
-	background: $richBlack;
+	background: var(--rich-black);
 	opacity: 0.95;
-	border-bottom: 1px solid $gunmetal;
+	border-bottom: 1px solid var(--gunmetal);
 
 	&_container {
 		flex-direction: row !important;
@@ -23,7 +23,7 @@
 			font-weight: 700 !important;
 			letter-spacing: -0.02em;
 			font-size: 30px !important;
-			color: $lavender !important;
+			color: var(--lavender) !important;
 			text-decoration: none !important;
 		}
 
@@ -44,12 +44,12 @@
 				@media (max-width: 810px) {
 					flex-direction: column !important;
 					padding: 1rem !important;
-					border-bottom: 1px solid $gunmetal;
+					border-bottom: 1px solid var(--gunmetal);
 				}
 
 				&_item {
 					&_link {
-						color: $lavender !important;
+						color: var(--lavender) !important;
 						text-decoration: none !important;
 						font-weight: 500 !important;
 						transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -63,7 +63,7 @@
 				}
 			}
 			&_divider {
-				background: $gunmetal;
+				background: var(--gunmetal);
 				width: 0.125rem;
 				height: 1.5rem;
 
@@ -78,11 +78,11 @@
 					border-radius: 0.5rem;
 
 					&_icon {
-						color: $lavender;
+						color: var(--lavender);
 					}
 
 					&:hover {
-						background: $gunmetal !important;
+						background: var(--gunmetal) !important;
 					}
 				}
 			}
@@ -100,11 +100,11 @@
 				border-radius: 0.5rem;
 
 				&_icon {
-					color: $lavender;
+					color: var(--lavender);
 				}
 
 				&:hover {
-					background: $gunmetal !important;
+					background: var(--gunmetal) !important;
 				}
 			}
 		}
@@ -114,13 +114,13 @@
 				justify-content: space-between;
 				align-items: center;
 				padding: 16px 32px;
-				border-bottom: 1px solid $gunmetal;
+				border-bottom: 1px solid var(--gunmetal);
 
 				&_typo {
 					font-weight: 700 !important;
 					letter-spacing: -0.02em;
 					font-size: 25px !important;
-					color: $lavender !important;
+					color: var(--lavender) !important;
 					text-decoration: none !important;
 				}
 				&_button {
@@ -129,11 +129,11 @@
 					border-radius: 0.5rem;
 
 					&_icon {
-						color: $lavender;
+						color: var(--lavender);
 					}
 
 					&:hover {
-						background: $gunmetal !important;
+						background: var(--gunmetal) !important;
 					}
 				}
 			}
@@ -144,12 +144,12 @@
 				padding: 16px 32px;
 
 				&_typo {
-					color: $lavender !important;
+					color: var(--lavender) !important;
 				}
 			}
 
 			.MuiDrawer-paper {
-				background: $richBlack;
+				background: var(--rich-black);
 				min-width: 50vw;
 			}
 		}

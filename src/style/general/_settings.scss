@@ -43,18 +43,18 @@ body {
 
 /* Set default font family */
 body {
-	background: $richBlack;
-	color: $lavender !important;
+	background: var(--rich-black);
+	color: var(--lavender) !important;
 	font-family: 'Roboto', sans-serif;
 }
 
 // change scrollbar color
 ::-webkit-scrollbar {
 	width: 10px;
-	background: $gunmetal;
+	background: var(--gunmetal);
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $charcoal;
+	background: var(--charcoal);
 	border-radius: 10px;
 }
