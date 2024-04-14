@@ -6,5 +6,13 @@
 		"image": "mrwigy.png",
 		"link": "https://mrwigy.fr",
 		"source": "https://github.com/mrwigy/mrwigyfr"
+	},
+	{
+		"name": "WiBot",
+		"description": "A Discord bot that I made for my server. It has a lot of features like moderation, fun, utility, and more. Maybe I will make it public one day.",
+		"technologies": ["JavaScript", "TypeScript", "Discord.JS", "MongoDB", "Glob", "DayJS", "Chalk", "Canvas", "Axios"],
+		"image": "wibot.png",
+		"link": "https://discord.com/users/1229034104461328445",
+		"source": ""
 	}
 ]
