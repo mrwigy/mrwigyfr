@@ -14,5 +14,13 @@
 		"image": "wibot.png",
 		"link": "https://discord.com/users/1229034104461328445",
 		"source": ""
+	},
+	{
+		"name": "WiBot.xyz",
+		"description": "A website for my Discord bot WiBot. It has a lot of features like moderation, fun, utility, and more. Maybe I will make it public one day.",
+		"technologies": ["JavaScript", "TypeScript", "ReactJS", "Vite", "MUI", "ExpressJS", "Axios", "JWT", "MongoDB"],
+		"image": "wibotxyz.png",
+		"link": "https://wibot.xyz",
+		"source": ""
 	}
 ]
