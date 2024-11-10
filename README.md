@@ -1,3 +1,1 @@
 # mrwigy.fr
-
-personnal website
